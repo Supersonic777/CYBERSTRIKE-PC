@@ -14,6 +14,7 @@ public class BulletScript : MonoBehaviour
    }
    void Update()
    {
+      if(gameObject.tag != "Bullet")
       Destroy(gameObject, 2.0f); //предполагается удаление объекта если он не попал в цель
    }
 }

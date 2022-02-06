@@ -14,26 +14,37 @@ public class Gun : MonoBehaviour
     public int damage;
     public float accuracy;
     public float mass;
+    public AudioClip shot;
+    public AudioClip reload;
+    AudioSource audioSrs;
+
+    
 
     private int allAmmo;
 
     // Update is called once per frame
     void Start()
     {
-
+         audioSrs = GetComponent<AudioSource>();
     }
     void Update()
     {
         if (Input.GetButtonDown("Fire1"))
         {
             Shot();
+            audioSrs.PlayOneShot(shot);
         }
-        if(Input.GetButtonDown("Fire2"))
+        if(Input.GetButton("Fire2"))
         {
             if(!IsInvoking("Shot")) 
             {
                Invoke("Shot", fireRate); //Вызываем функцию Shot со скорость FireRate, в секундах
+               audioSrs.PlayOneShot(shot);
             }
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        { //здесь задаете  любую кнопку
+        audioSrs.PlayOneShot(reload);
         }
     }
     void Shot()
