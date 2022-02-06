@@ -135,8 +135,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: 100
-  speed: 2
-  acceleration: 6
+  speed: 6
+  acceleration: 12
   staminaFill: 1
   dieMessage: {fileID: 0}
   rb: {fileID: 895739731161795401}
