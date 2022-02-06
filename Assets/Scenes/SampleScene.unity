@@ -1453,11 +1453,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a671cf5709b32204a82ea3f4e3bdf9e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zoomSpeed: 1
-  targetOrtho: 4
-  smoothSpeed: 2
-  minOrtho: 3
-  maxOrtho: 7
+  zoomSpeed: 2
+  targetOrtho: 7
+  smoothSpeed: 5
+  minOrtho: 5
+  maxOrtho: 14
 --- !u!4 &534235572 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3468310883442562175, guid: 4ec363d3fe0da53488786f433dcfec6a,
@@ -5863,7 +5863,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 75bb1523b1f7f29468a93e0022f01eb7, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0c65146b58cf91d4384d7fd798848314, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -6666,6 +6666,11 @@ PrefabInstance:
       objectReference: {fileID: 519420031}
     - target: {fileID: 895739731161795402, guid: e657aabe99afa0b4e97144d61cee84ab,
         type: 3}
+      propertyPath: speed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 895739731161795402, guid: e657aabe99afa0b4e97144d61cee84ab,
+        type: 3}
       propertyPath: stamina
       value: 
       objectReference: {fileID: 1438138487}
@@ -6674,6 +6679,11 @@ PrefabInstance:
       propertyPath: dieMessage
       value: 
       objectReference: {fileID: 1763128463}
+    - target: {fileID: 895739731161795402, guid: e657aabe99afa0b4e97144d61cee84ab,
+        type: 3}
+      propertyPath: acceleration
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 895739731161795403, guid: e657aabe99afa0b4e97144d61cee84ab,
         type: 3}
       propertyPath: m_Name
