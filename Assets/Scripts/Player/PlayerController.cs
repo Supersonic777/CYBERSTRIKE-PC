@@ -50,7 +50,13 @@ public class PlayerController : MonoBehaviour {
 			    	rb.MovePosition(rb.position +  movement * acceleration * Time.fixedDeltaTime);
 			        staminaFill -= 0.002f;
 			   }
+			   else
+			   {
+			    	rb.MovePosition(rb.position +  movement * speed * Time.fixedDeltaTime);
+			        //staminaFill +=0.001f;
+			   }
 		   }
+	
 		   else
 		   {
 			   if(staminaFill<1)
@@ -60,6 +66,7 @@ public class PlayerController : MonoBehaviour {
 		   rb.MovePosition(rb.position +  movement * speed * Time.fixedDeltaTime);
 		   }
 		}
+		
 		else if(staminaFill < 1)
 		{
 		   staminaFill +=0.004f;
@@ -68,10 +75,13 @@ public class PlayerController : MonoBehaviour {
 		   float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;  //+-90 градусов
 		   rb.rotation = angle;
 	}
-	void OnCollisionEnter2D(Collision2D enemy)
+}	
+
+
+	/*void OnCollisionEnter2D(Collision2D enemy)
 {
-    //if (enemy.gameObject.tag == "Enemy")
-     //   StartCoroutine(ToDamage());
+    if (enemy.gameObject.tag == "Enemy")
+        StartCoroutine(ToDamage());
 }
 
 /*void OnCollisionExit2D(Collision2D enemy)
@@ -89,4 +99,4 @@ private IEnumerator ToDamage()
         yield return new WaitForSeconds(0.4f);
     }
 }*/
-}
+
