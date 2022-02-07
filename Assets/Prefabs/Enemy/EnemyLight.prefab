@@ -161,5 +161,4 @@ MonoBehaviour:
   health: 50
   damage: 5
   attackDistance: 1.5
-  atackTarget: {fileID: 895739731161795403, guid: e657aabe99afa0b4e97144d61cee84ab,
-    type: 3}
+  atackTarget: {fileID: 0}

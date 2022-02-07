@@ -23,7 +23,7 @@ public class Spawner : MonoBehaviour
     IEnumerator SpawnGO()
     {
         yield return new WaitForSeconds(spawnInSecounds);
-        Instantiate(objectToSpawn, transformList[0].position, Quaternion.identity);
+        Instantiate(objectToSpawn, transformList[Random.Range(0,transformListLenght-1)].position, Quaternion.identity);
         Repeat();
     }
 }

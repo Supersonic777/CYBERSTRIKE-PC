@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
+    public enum fireModeList
+    {
+      Single, 
+      Auto, 
+      Birst
+    };
+    public fireModeList fireMode;
     public Transform firePoint;
     public GameObject bulletPrefab;
     public float bulletSpeed;
