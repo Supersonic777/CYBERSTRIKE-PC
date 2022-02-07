@@ -39,7 +39,7 @@ public class Enemy : MonoBehaviour
       if(collision.gameObject.tag == "Player")
       {
         //giveDamage.playerHealth -= damage;
-        atackTarget.GetComponent<PlayerController>().playerHealth -= damage;
+        FindObjectOfType<PlayerController>().playerHealth -= damage;
       }
     }
 }

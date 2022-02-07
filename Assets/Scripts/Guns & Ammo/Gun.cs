@@ -36,12 +36,12 @@ public class Gun : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && fireMode == fireModeList.Single)
         {
             Shot();
             audioSrs.PlayOneShot(shot);
         }
-        if(Input.GetButton("Fire2"))
+        if(Input.GetButton("Fire2") && fireMode == fireModeList.Auto)
         {
             if(!IsInvoking("Shot")) 
             {
