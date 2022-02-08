@@ -5,11 +5,23 @@ using UnityEngine;
 public class BulletScript : MonoBehaviour
 {
    public GameObject hitEffect;//назначаем объект который выступит эффектом после попадания
-   public float damage = 10.0f;
+   private float damage;
+
+   void Start()
+   {
+      if(GameObject.FindGameObjectWithTag("RightGun").GetComponent<GunController>().isInRightHand)
+      {
+         damage = GameObject.FindGameObjectWithTag("RightGun").GetComponent<GunController>().gunDamage;
+      }
+      else
+      {
+         damage = GameObject.FindGameObjectWithTag("LeftGun").GetComponent<GunController>().gunDamage;
+      }
+   }
    
    void OnCollisionEnter2D(Collision2D collision)
    {
-      if(collision.gameObject.tag != "Bullet")
+      if(collision.gameObject.tag != "Bullet" && collision.gameObject.tag != "Player")
       {
         if(collision.gameObject.tag == "Enemy")
         {

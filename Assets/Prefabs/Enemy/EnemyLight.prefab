@@ -158,7 +158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7
   armor: 0
-  health: 50
+  health: 40
   damage: 5
   attackDistance: 1.5
   atackTarget: {fileID: 0}
