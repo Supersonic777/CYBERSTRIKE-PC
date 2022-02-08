@@ -3498,6 +3498,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1510695147}
     m_Modifications:
+    - target: {fileID: 7353911280476592658, guid: 51356c374de226b41b179fb32d7ddcfa,
+        type: 3}
+      propertyPath: gunAccuracy
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 7353911280476592668, guid: 51356c374de226b41b179fb32d7ddcfa,
         type: 3}
       propertyPath: m_Name
@@ -3557,6 +3562,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365964042342741506, guid: 51356c374de226b41b179fb32d7ddcfa,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70710677
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365964042342741506, guid: 51356c374de226b41b179fb32d7ddcfa,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.70710677
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51356c374de226b41b179fb32d7ddcfa, type: 3}
@@ -5520,7 +5535,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1433502695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6327,7 +6342,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1732662691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6621,7 +6636,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1840953280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7038,7 +7053,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1994123244
 Transform:
   m_ObjectHideFlags: 0
