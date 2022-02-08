@@ -9,6 +9,7 @@ TagManager:
   - Bullet
   - Medkit
   - EnemySpawn
+  - Gun
   layers:
   - Default
   - TransparentFX

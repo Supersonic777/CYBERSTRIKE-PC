@@ -40,6 +40,7 @@
      <Compile Include="Assets\Scripts\UI\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraFollow.cs" />
+     <Compile Include="Assets\Scripts\Spawner.cs" />
      <Compile Include="Assets\Scripts\Inventory.cs" />
      <Compile Include="Assets\Scripts\Guns &amp; Ammo\BulletScript.cs" />
      <Compile Include="Assets\Scripts\UI\VolumeChanger.cs" />
@@ -48,11 +49,10 @@
      <Compile Include="Assets\Scripts\UI\MainMenu.cs" />
      <Compile Include="Assets\Scripts\EnergyDrink.cs" />
      <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
-     <Compile Include="Assets\Scripts\Guns &amp; Ammo\Gun.cs" />
+     <Compile Include="Assets\Scripts\Guns &amp; Ammo\GunController.cs" />
      <Compile Include="Assets\Scripts\UI\ButtonFx.cs" />
      <Compile Include="Assets\Scripts\UI\GameMenu.cs" />
      <Compile Include="Assets\Scripts\Archive\ShotSound.cs" />
-     <Compile Include="Assets\Scripts\Spawner.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.26f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
