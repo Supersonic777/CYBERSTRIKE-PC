@@ -13,6 +13,7 @@ public class GunController : MonoBehaviour
     public fireModeList fireMode;
     public Transform firePoint;
     public GameObject bulletPrefab;
+    public bool isInRightHand;
     public float bulletSpeed;
     public float fireRate;
     public int ammo;

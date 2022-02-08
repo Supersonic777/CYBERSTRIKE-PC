@@ -5,15 +5,21 @@ using UnityEngine;
 public class BulletScript : MonoBehaviour
 {
    public GameObject hitEffect;//назначаем объект который выступит эффектом после попадания
+   public float damage = 10.0f;
    
    void OnCollisionEnter2D(Collision2D collision)
    {
       if(collision.gameObject.tag != "Bullet")
       {
+        if(collision.gameObject.tag == "Enemy")
+        {
+           collision.gameObject.GetComponent<Enemy>().health -= damage;
+        }
         GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);//местоположение возникновения эффекта
         Destroy(effect, 0.1f);//уничтожаем эффект после данного количества времени
         Destroy(gameObject);
       }
+
    }
    void Update()
    {

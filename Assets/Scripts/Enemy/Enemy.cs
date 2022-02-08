@@ -30,7 +30,7 @@ public class Enemy : MonoBehaviour
     {
       if(collision.gameObject.tag == "Bullet")
       {
-       health -= FindObjectOfType<GunController>().gunDamage;
+       //health -= FindObjectOfType<GunController>().gunDamage;
         if(health <=0)
         {
             Destroy(gameObject);
