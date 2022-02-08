@@ -9,14 +9,7 @@ public class BulletScript : MonoBehaviour
 
    void Start()
    {
-      if(GameObject.FindGameObjectWithTag("RightGun").GetComponent<GunController>().isInRightHand)
-      {
-         damage = GameObject.FindGameObjectWithTag("RightGun").GetComponent<GunController>().gunDamage;
-      }
-      else
-      {
-         damage = GameObject.FindGameObjectWithTag("LeftGun").GetComponent<GunController>().gunDamage;
-      }
+         damage = GameObject.FindGameObjectWithTag("Gun").GetComponent<GunController>().gunDamage;
    }
    
    void OnCollisionEnter2D(Collision2D collision)
