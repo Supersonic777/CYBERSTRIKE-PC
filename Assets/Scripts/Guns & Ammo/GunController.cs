@@ -8,7 +8,8 @@ public class GunController : MonoBehaviour
     {
       Single, 
       Auto, 
-      Birst
+      Birst,
+      Shootgun
     };
     public fireModeList fireMode;
     public Transform firePoint;
@@ -17,6 +18,7 @@ public class GunController : MonoBehaviour
     public float bulletSpeed;
     public float fireRate;
     public int ammo;
+    public int shootgunFraction;
     public float reloadSpeed;
     public float gunDamage;
     public float gunAccuracy;
@@ -42,12 +44,14 @@ public class GunController : MonoBehaviour
     }
     void Update()
     {
+        //блок управления стрельбой обыкновенного пистолета
         if (Input.GetButtonDown("Fire1") && fireMode == fireModeList.Single)
         {
             Shot();
             audioSrs.PlayOneShot(shot);
         }
-        if(Input.GetButton("Fire2") && fireMode == fireModeList.Auto)
+        //блок управления стрельбой пистолета-пулемёта
+        if(Input.GetButton("Fire1") && fireMode == fireModeList.Auto)
         {
             if(!IsInvoking("Shot")) 
             {
@@ -55,9 +59,26 @@ public class GunController : MonoBehaviour
                audioSrs.PlayOneShot(shot);
             }
         }
+        //блок управления перезарядкой
         if (Input.GetKeyDown(KeyCode.R))
         { //здесь задаете  любую кнопку
         audioSrs.PlayOneShot(reload);
+        }
+        //блок управления дробовиком
+        if (Input.GetButtonDown("Fire1") && fireMode == fireModeList.Shootgun)
+        {
+           while(shootgunFraction > 0)
+           {
+               Shot();
+               shootgunFraction --;
+           }
+
+            audioSrs.PlayOneShot(shot);
+            //if(!IsInvoking("Shot")) 
+           // {
+            //   Invoke("Shot", fireRate); //Вызываем функцию Shot со скорость FireRate, в секундах
+            //   audioSrs.PlayOneShot(shot);
+           // }
         }
 
     }
