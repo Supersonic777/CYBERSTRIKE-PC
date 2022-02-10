@@ -17,18 +17,19 @@ public class GunController : MonoBehaviour
     //public bool isInRightHand;
     public float bulletSpeed;
     public float fireRate;
-    public int ammo;
+    public int allAmmo;
+    public int ammoInMag;
     public int shootgunFraction;
     public float reloadSpeed;
     public float gunDamage;
     public float gunAccuracy;
     public float mass;
     public AudioClip shot;
-    public AudioClip reload;
+    public AudioClip reloadSound;
     AudioSource audioSrs;
 
-    
-    private int allAmmo;
+
+    private int ammoInMagNow;
     private float ammoScatter;
     private float minAmmoScatter;
     private float maxAmmoScatter;
@@ -37,6 +38,7 @@ public class GunController : MonoBehaviour
     // Update is called once per frame
     void Start()
     {
+        ammoInMagNow = ammoInMag;
         audioSrs = GetComponent<AudioSource>();
         nativeBulletRotation = firePoint.rotation; //присваиваем начальное положени пули 
         maxAmmoScatter = Random.Range(0 , gunAccuracy/2);
@@ -44,42 +46,48 @@ public class GunController : MonoBehaviour
     }
     void Update()
     {
-        //блок управления стрельбой обыкновенного пистолета
-        if (Input.GetButtonDown("Fire1") && fireMode == fireModeList.Single)
-        {
-            Shot();
-            audioSrs.PlayOneShot(shot);
-        }
+      if(ammoInMagNow > 0)
+      {
+      //блок управления стрельбой обыкновенного пистолета
+      if (Input.GetButtonDown("Fire1") && fireMode == fireModeList.Single)
+      {
+        Shot();
+        audioSrs.PlayOneShot(shot);
+        ammoInMagNow--;
+      }
         //блок управления стрельбой пистолета-пулемёта
-        if(Input.GetButton("Fire1") && fireMode == fireModeList.Auto)
+      if(Input.GetButton("Fire1") && fireMode == fireModeList.Auto)
+      {
+        if(!IsInvoking("Shot")) 
         {
-            if(!IsInvoking("Shot")) 
-            {
-               Invoke("Shot", fireRate); //Вызываем функцию Shot со скорость FireRate, в секундах
-               audioSrs.PlayOneShot(shot);
-            }
+            Invoke("Shot", fireRate); //Вызываем функцию Shot со скорость FireRate, в секундах
+            audioSrs.PlayOneShot(shot);
+            ammoInMagNow--;
         }
-        //блок управления перезарядкой
-        if (Input.GetKeyDown(KeyCode.R))
-        { //здесь задаете  любую кнопку
-        audioSrs.PlayOneShot(reload);
-        }
-        //блок управления дробовиком
+      }
+      //блок управления дробовиком
         if (Input.GetButtonDown("Fire1") && fireMode == fireModeList.Shootgun)
         {
-           while(shootgunFraction > 0)
-           {
-               Shot();
-               shootgunFraction --;
-           }
-
-            audioSrs.PlayOneShot(shot);
-            //if(!IsInvoking("Shot")) 
-           // {
-            //   Invoke("Shot", fireRate); //Вызываем функцию Shot со скорость FireRate, в секундах
-            //   audioSrs.PlayOneShot(shot);
-           // }
+          while(shootgunFraction > 0)
+          {
+            Shot();
+            shootgunFraction --;
+          }
+        audioSrs.PlayOneShot(shot);
+        //if(!IsInvoking("Shot")) 
+        // {
+        //   Invoke("Shot", fireRate); //Вызываем функцию Shot со скорость FireRate, в секундах
+        //   audioSrs.PlayOneShot(shot);
+        // }
         }
+      }
+      //блок управления перезарядкой
+      if (Input.GetKeyDown(KeyCode.R))
+      { //здесь задаете  любую кнопку
+        audioSrs.PlayOneShot(reloadSound);
+        Invoke("Shot", reloadSpeed);
+        ammoInMagNow = ammoInMag;
+      }
 
     }
     void Shot()
