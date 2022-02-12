@@ -4,7 +4,8 @@ using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody2D))]
 
-public class PlayerController : MonoBehaviour {
+public class PlayerController : MonoBehaviour 
+{
 
     public int playerHealth = 100;
 	public float speed = 2f;
@@ -15,12 +16,15 @@ public class PlayerController : MonoBehaviour {
 	public Camera cam;
 	public Image bar;
 	public Image stamina;
+	public AudioClip walkSound;
+	public AudioClip runSound;
 	private float healthFill;
 	Vector2 movement;
 	Vector2 mousePos;
+	AudioSource playerAudioSrs;
 	void Start()
 	{
-        
+        playerAudioSrs = GetComponent<AudioSource>();
 	}
 
 	void Update () 
@@ -75,6 +79,7 @@ public class PlayerController : MonoBehaviour {
 		   float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;  //+-90 градусов
 		   rb.rotation = angle;
 	}
+
 }	
 
 
