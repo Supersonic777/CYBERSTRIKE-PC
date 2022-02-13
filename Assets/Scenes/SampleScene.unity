@@ -1632,6 +1632,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 365858614714564674, guid: e657aabe99afa0b4e97144d61cee84ab,
         type: 3}
+      propertyPath: fireMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 365858614714564674, guid: e657aabe99afa0b4e97144d61cee84ab,
+        type: 3}
       propertyPath: reloadNotification
       value: 
       objectReference: {fileID: 1284410171}
@@ -7338,7 +7343,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1994123244
 Transform:
   m_ObjectHideFlags: 0
@@ -7363,11 +7368,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0c65146b58cf91d4384d7fd798848314, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5e9b4f47daa5e2e4b9e37acfa657b68e, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

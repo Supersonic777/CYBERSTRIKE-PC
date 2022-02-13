@@ -82,11 +82,11 @@ public class GunController : MonoBehaviour
       //блок управления перезарядкой
       if (ammoInMagNow != ammoInMag && Input.GetKeyDown(KeyCode.R))
       { //здесь задаете  любую кнопку
+        ammoInMagNow = 0;
         reloadNotification.SetActive(true);
         audioSrs.PlayOneShot(reloadSound);
-        Invoke("Shot", reloadSpeed);
+        //Invoke("Shot", reloadSpeed);
         Invoke("Reload", reloadSpeed);
-        ammoInMagNow = ammoInMag;
       }
     }
     void Shot()
@@ -103,16 +103,16 @@ public class GunController : MonoBehaviour
         firePoint.transform.Rotate(new Vector3(0, 0, +ammoScatter));
         minAmmoScatter -= ammoScatter;
       }
-      if (Input.GetButtonDown("Fire1") || Input.GetButton("Fire1"))
-      {
+      
       GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
       Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
       rb.AddForce(firePoint.up * bulletSpeed, ForceMode2D.Impulse);
-      }
+  
     }
     void Reload()
     {
       reloadNotification.SetActive(false);
+      ammoInMagNow = ammoInMag;
       gameObject.GetComponent<AmmoEnumerator>().ammo = ammoInMag;
     }
 }

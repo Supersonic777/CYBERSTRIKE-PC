@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - AmmoEnumerator
     - BulletScript
     - ButtonFx
     - CameraFollow
@@ -9,6 +10,7 @@ ScriptsOnlyBuild:
     - EnergyDrink
     - GameMenu
     - GunController
+    - HightScore
     - Inventory
     - MainMenu
     - Medkit
@@ -32,12 +34,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.TilemapPrefabStageHelper
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
-    UnityEditor.Graphs.dll:
-    - UnityEditor.Graphs.AnimationBlendTree.Graph
-    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.Graph
-    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -51,6 +47,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
     - UnityEngine.UI.Slider
+    - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/MainMenu.unity:
     - Class: 1
@@ -76,21 +73,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2094}
     - Class: 114
-      Script: {instanceID: 2630}
+      Script: {instanceID: 2632}
     - Class: 114
-      Script: {instanceID: 2712}
+      Script: {instanceID: 2714}
     - Class: 114
-      Script: {instanceID: 2884}
+      Script: {instanceID: 2886}
     - Class: 114
-      Script: {instanceID: 3122}
+      Script: {instanceID: 3124}
     - Class: 114
-      Script: {instanceID: 3368}
+      Script: {instanceID: 3372}
     - Class: 114
-      Script: {instanceID: 3488}
+      Script: {instanceID: 3492}
     - Class: 114
-      Script: {instanceID: 4258}
+      Script: {instanceID: 4262}
     - Class: 114
-      Script: {instanceID: 5258}
+      Script: {instanceID: 5262}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -165,30 +162,38 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2182}
     - Class: 114
-      Script: {instanceID: 2466}
+      Script: {instanceID: 2188}
     - Class: 114
-      Script: {instanceID: 2712}
+      Script: {instanceID: 2284}
     - Class: 114
-      Script: {instanceID: 2884}
+      Script: {instanceID: 2468}
     - Class: 114
-      Script: {instanceID: 2958}
+      Script: {instanceID: 2714}
     - Class: 114
-      Script: {instanceID: 3122}
+      Script: {instanceID: 2886}
     - Class: 114
-      Script: {instanceID: 3368}
+      Script: {instanceID: 2960}
     - Class: 114
-      Script: {instanceID: 3488}
+      Script: {instanceID: 3124}
     - Class: 114
-      Script: {instanceID: 3952}
+      Script: {instanceID: 3322}
     - Class: 114
-      Script: {instanceID: 4258}
+      Script: {instanceID: 3372}
     - Class: 114
-      Script: {instanceID: 4894}
+      Script: {instanceID: 3492}
     - Class: 114
-      Script: {instanceID: 5258}
+      Script: {instanceID: 3956}
     - Class: 114
-      Script: {instanceID: 5630}
+      Script: {instanceID: 4262}
+    - Class: 114
+      Script: {instanceID: 4898}
+    - Class: 114
+      Script: {instanceID: 5262}
+    - Class: 114
+      Script: {instanceID: 5634}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -203,6 +208,12 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 241
+      Script: {instanceID: 0}
+    - Class: 243
+      Script: {instanceID: 0}
+    - Class: 245
       Script: {instanceID: 0}
     - Class: 850595691
       Script: {instanceID: 0}
@@ -293,7 +304,7 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: d5ad1d590c9262dda904577be31dfd64
+      Hash: 64f595d99f9d1902c3892d43cf5ffa07
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -339,6 +350,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Zoom
+  - hash:
+      serializedVersion: 2
+      Hash: 59eb044069cb69617a93e2bc13b23f13
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HightScore
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -485,6 +502,12 @@ ScriptsOnlyBuild:
     className: TestResultRendererCallback
   - hash:
       serializedVersion: 2
+      Hash: 06b2e583c27d5d44da388fa667088d12
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AmmoEnumerator
+  - hash:
+      serializedVersion: 2
       Hash: 748dd2a2a28da4e618912da5ac45684b
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -569,7 +592,7 @@ ScriptsOnlyBuild:
     className: PlayerQuitHandler
   - hash:
       serializedVersion: 2
-      Hash: 5385500c6057de20a975955390f58cef
+      Hash: 586b49552c3dc45d4d4117db3d77a3a9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Enemy
@@ -725,7 +748,7 @@ ScriptsOnlyBuild:
     className: TMP_Settings
   - hash:
       serializedVersion: 2
-      Hash: 771e43e16e964b5c0e01e113220bd138
+      Hash: c331b96d1f46505eb5eabd3fbe1f7efc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GunController
