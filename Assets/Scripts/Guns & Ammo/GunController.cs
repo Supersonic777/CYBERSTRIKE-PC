@@ -14,6 +14,7 @@ public class GunController : MonoBehaviour
     public fireModeList fireMode;
     public Transform firePoint;
     public GameObject bulletPrefab;
+    public GameObject reloadNotification;
     //public bool isInRightHand;
     public float bulletSpeed;
     public float fireRate;
@@ -54,6 +55,7 @@ public class GunController : MonoBehaviour
         Shot();
         audioSrs.PlayOneShot(shot);
         ammoInMagNow--;
+        gameObject.GetComponent<AmmoEnumerator>().ammo --;
       }
         //блок управления стрельбой пистолета-пулемёта
       if(Input.GetButton("Fire1") && fireMode == fireModeList.Auto)
@@ -63,51 +65,54 @@ public class GunController : MonoBehaviour
             Invoke("Shot", fireRate); //Вызываем функцию Shot со скорость FireRate, в секундах
             audioSrs.PlayOneShot(shot);
             ammoInMagNow--;
+            gameObject.GetComponent<AmmoEnumerator>().ammo --;
         }
       }
       //блок управления дробовиком
-        if (Input.GetButtonDown("Fire1") && fireMode == fireModeList.Shootgun)
+      if (Input.GetButtonDown("Fire1") && fireMode == fireModeList.Shootgun)
+      {
+        while(shootgunFraction > 0)
         {
-          while(shootgunFraction > 0)
-          {
-            Shot();
-            shootgunFraction --;
-          }
-        audioSrs.PlayOneShot(shot);
-        //if(!IsInvoking("Shot")) 
-        // {
-        //   Invoke("Shot", fireRate); //Вызываем функцию Shot со скорость FireRate, в секундах
-        //   audioSrs.PlayOneShot(shot);
-        // }
+        Shot();
+        shootgunFraction --;
         }
+        audioSrs.PlayOneShot(shot);
+      }
       }
       //блок управления перезарядкой
-      if (Input.GetKeyDown(KeyCode.R))
+      if (ammoInMagNow != ammoInMag && Input.GetKeyDown(KeyCode.R))
       { //здесь задаете  любую кнопку
+        reloadNotification.SetActive(true);
         audioSrs.PlayOneShot(reloadSound);
         Invoke("Shot", reloadSpeed);
+        Invoke("Reload", reloadSpeed);
         ammoInMagNow = ammoInMag;
       }
-
     }
     void Shot()
     {
-        ammoScatter = Random.Range(0 , gunAccuracy/2);
-
-        
-        if(maxAmmoScatter >= minAmmoScatter)
-        {  
-            firePoint.transform.Rotate(new Vector3(0, 0, -ammoScatter));
-            maxAmmoScatter -= ammoScatter;
-        }
-        else if(maxAmmoScatter <= minAmmoScatter)
-        {
-            firePoint.transform.Rotate(new Vector3(0, 0, +ammoScatter));
-            minAmmoScatter -= ammoScatter;
-        }
-
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        rb.AddForce(firePoint.up * bulletSpeed, ForceMode2D.Impulse);
+      ammoScatter = Random.Range(0 , gunAccuracy/2);
+      
+      if(maxAmmoScatter >= minAmmoScatter)
+      {  
+        firePoint.transform.Rotate(new Vector3(0, 0, -ammoScatter));
+        maxAmmoScatter -= ammoScatter;
+      }
+      else if(maxAmmoScatter <= minAmmoScatter)
+      {
+        firePoint.transform.Rotate(new Vector3(0, 0, +ammoScatter));
+        minAmmoScatter -= ammoScatter;
+      }
+      if (Input.GetButtonDown("Fire1") || Input.GetButton("Fire1"))
+      {
+      GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+      Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+      rb.AddForce(firePoint.up * bulletSpeed, ForceMode2D.Impulse);
+      }
+    }
+    void Reload()
+    {
+      reloadNotification.SetActive(false);
+      gameObject.GetComponent<AmmoEnumerator>().ammo = ammoInMag;
     }
 }

@@ -22,6 +22,6 @@ public class HightScore : MonoBehaviour
     void Update()
     {
         PlayerPrefs.SetInt("HightScore", score);
-        hightScoreText.text = "HightScore:" + score;
+        hightScoreText.text = "HightScore: " + score;
     }
 }
