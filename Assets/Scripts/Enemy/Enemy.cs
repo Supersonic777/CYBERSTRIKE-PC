@@ -33,7 +33,8 @@ public class Enemy : MonoBehaviour
        //health -= FindObjectOfType<GunController>().gunDamage;
         if(health <=0)
         {
-            Destroy(gameObject);
+          GameObject.FindGameObjectWithTag("Player").GetComponent<HightScore>().score += 1;
+          Destroy(gameObject);
         }
       }
       if(collision.gameObject.tag == "Player")
