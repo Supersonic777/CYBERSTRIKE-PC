@@ -156,12 +156,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14f653827847aad419b4a4a4c47d942b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  schetchik: 0
   enemyType: 1
   speed: 5
   armor: 0
   health: 150
   damage: 15
+  damageRate: 0.9
   attackDistance: 1.5
   givePointsWhenDie: 0
   timeToSelfDestroy: 120

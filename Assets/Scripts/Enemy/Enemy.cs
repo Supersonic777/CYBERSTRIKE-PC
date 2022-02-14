@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-  public float schetchik;
   public enum enemyTypeList
   {
   Light,
@@ -17,6 +16,7 @@ public class Enemy : MonoBehaviour
   public float armor;
   public float health;
   public int damage = 5;
+  public float damageRate;
   public float attackDistance;
   public int givePointsWhenDie;
   public float timeToSelfDestroy;
@@ -65,18 +65,31 @@ public class Enemy : MonoBehaviour
       gameObject.GetComponent<SpriteRenderer>().color = Color.grey;
       gameObject.GetComponent<SpriteRenderer>().sortingOrder -= 1;
       Invoke("DestroyEnemy", timeToSelfDestroy);
+      //В параметре следующиго инвока предусморенно /2 по причине что исчезновение начнётся в середине
+      //общего времени до уничтожения объекта 
       InvokeRepeating("HideEnemy", timeToSelfDestroy/2, timeToSelfDestroy/60/1.6f/2);
       }
     }
+  }
+  void OnCollisionStay2D(Collision2D collision)
+  {
     if(collision.gameObject.tag == "Player")
     {
-    FindObjectOfType<PlayerController>().playerHealth -= damage;
+      //InvokeRepeating("NearDamage", damageRate, damageRate);
+      Invoke("NearDamage", damageRate);
     }
+  }
+  void NearDamage()
+  {
+    FindObjectOfType<PlayerController>().playerHealth -= damage;
+  }
+  void FarDamage()
+  {
+
   }
   //destroy enemy object when work
   void HideEnemy()
   {
-    schetchik ++;
     gameObject.GetComponent<SpriteRenderer>().color -= new Color(0,0,0,0.01f);
   }
   void DestroyEnemy()
