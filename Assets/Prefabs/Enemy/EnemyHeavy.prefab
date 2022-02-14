@@ -163,4 +163,5 @@ MonoBehaviour:
   damage: 25
   attackDistance: 1.5
   givePointsWhenDie: 0
+  timeToSelfDestroy: 15
   atackTarget: {fileID: 0}

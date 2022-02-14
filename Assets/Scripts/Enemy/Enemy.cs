@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour
   public int damage = 5;
   public float attackDistance;
   public int givePointsWhenDie;
+  public float timeToSelfDestroy;
 
   public GameObject atackTarget;
   private Transform target;
@@ -45,27 +46,34 @@ public class Enemy : MonoBehaviour
 
   void Update()
   {
-    if(Vector2.Distance(transform.position, target.position) > attackDistance)
+    if(health > 0)
     {
-    transform.position = Vector2.MoveTowards(transform.position,target.position ,speed * Time.deltaTime);
+      if(Vector2.Distance(transform.position, target.position) > attackDistance)
+      {
+      transform.position = Vector2.MoveTowards(transform.position,target.position ,speed * Time.deltaTime);
+      }
     }
   }
   void OnCollisionEnter2D(Collision2D collision)
   {
     if(collision.gameObject.tag == "Bullet")
     {
-    //health -= FindObjectOfType<GunController>().gunDamage;
       if(health <=0)
       {
       GameObject.FindGameObjectWithTag("Player").GetComponent<HightScore>().score += givePointsWhenDie;
-      Destroy(gameObject);
+      gameObject.GetComponent<CircleCollider2D>().enabled = false;
+      Invoke("DestroyEnemy", timeToSelfDestroy);
       }
     }
     if(collision.gameObject.tag == "Player")
     {
-    //giveDamage.playerHealth -= damage;
     FindObjectOfType<PlayerController>().playerHealth -= damage;
     }
+  }
+  //destroy enemy object when work
+  void DestroyEnemy()
+  {
+    Destroy(gameObject);
   }
 }
 
