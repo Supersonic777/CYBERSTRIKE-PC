@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour 
 {
 
-    public int playerHealth = 100;
+    public float playerHealth = 100;
 	public float speed = 2f;
 	public float acceleration = 6f;
 	public float staminaFill = 1f;

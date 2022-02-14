@@ -21,7 +21,6 @@ public class Enemy : MonoBehaviour
   public int givePointsWhenDie;
   public float timeToSelfDestroy;
 
-  public GameObject atackTarget;
   private Transform target;
     //private PlayerController giveDamage = new PlayerController();
   void Start()
@@ -71,18 +70,18 @@ public class Enemy : MonoBehaviour
       }
     }
   }
-  void OnCollisionStay2D(Collision2D collision)
-  {
-    if(collision.gameObject.tag == "Player")
-    {
-      //InvokeRepeating("NearDamage", damageRate, damageRate);
-      Invoke("NearDamage", damageRate);
-    }
-  }
-  void NearDamage()
-  {
-    FindObjectOfType<PlayerController>().playerHealth -= damage;
-  }
+  //void OnCollisionStay2D(Collision2D collision)
+  //{
+  //  if(collision.gameObject.tag == "Player")
+   // {
+    //  Invoke("NearDamage", damageRate);
+  //  }
+    
+  //}
+  //void NearDamage()
+  //{
+   // GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().playerHealth -= damage;
+  //}
   void FarDamage()
   {
 

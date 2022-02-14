@@ -5,25 +5,29 @@ using UnityEngine;
 public class Medkit : MonoBehaviour
 {
     public int HP = 25;
-    public PlayerController playerHP;
+    private GameObject playerHP;
+    void Start()
+    {
+
+    }
 
     void Update()
     {
-        
+        playerHP = GameObject.FindGameObjectWithTag("Player");
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
          if(collision.gameObject.tag == "Player")
          {
-               if(playerHP.playerHealth < 75)
+               if(playerHP.GetComponent<PlayerController>().playerHealth < 75)
                {
-                playerHP.playerHealth +=HP;
+                playerHP.GetComponent<PlayerController>().playerHealth +=HP;
                 Destroy(gameObject);
                }
-               if(playerHP.playerHealth >= 75 && playerHP.playerHealth < 100)
+               if(playerHP.GetComponent<PlayerController>().playerHealth >= 75 && playerHP.GetComponent<PlayerController>().playerHealth < 100)
                {
-                   playerHP.playerHealth += 100-playerHP.playerHealth;
+                   playerHP.GetComponent<PlayerController>().playerHealth += 100-playerHP.GetComponent<PlayerController>().playerHealth;
                    Destroy(gameObject);
                }
 

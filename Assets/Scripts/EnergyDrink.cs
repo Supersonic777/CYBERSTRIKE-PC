@@ -5,28 +5,33 @@ using UnityEngine;
 public class EnergyDrink : MonoBehaviour
 {
     public float giveStamina = 0.25f;
-    public PlayerController PlayerStamina;
+    public GameObject PlayerStamina;
+
+    void Start()
+    {
+      PlayerStamina = GameObject.FindGameObjectWithTag("Player");
+    }
 
     void Update()
     {
         
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-         if(collision.gameObject.tag == "Player")
-         {
-               if(PlayerStamina.staminaFill < 0.75f)
-               {
-                PlayerStamina.staminaFill +=giveStamina;
-                Destroy(gameObject);
-               }
-               if(PlayerStamina.staminaFill >= 0.75f && PlayerStamina.staminaFill < 1.0f)
-               {
-                   PlayerStamina.staminaFill += 1.0f-PlayerStamina.staminaFill;
-                   Destroy(gameObject);
-               }
+        if(collision.gameObject.tag == "Player")
+        {
+            if(PlayerStamina.GetComponent<PlayerController>().staminaFill < 0.75f)
+            {
+            PlayerStamina.GetComponent<PlayerController>().staminaFill +=giveStamina;
+            Destroy(gameObject);
+            }
+            if(PlayerStamina.GetComponent<PlayerController>().staminaFill >= 0.75f && PlayerStamina.GetComponent<PlayerController>().staminaFill < 1.0f)
+            {
+            PlayerStamina.GetComponent<PlayerController>().staminaFill += PlayerStamina.GetComponent<PlayerController>().staminaFill;
+            Destroy(gameObject);
+            }
 
-         }
+        }
     }
 }
