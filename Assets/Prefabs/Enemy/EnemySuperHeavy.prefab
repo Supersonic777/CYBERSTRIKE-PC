@@ -156,6 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14f653827847aad419b4a4a4c47d942b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  schetchik: 0
   enemyType: 3
   speed: 3
   armor: 0
@@ -163,5 +164,5 @@ MonoBehaviour:
   damage: 50
   attackDistance: 1.5
   givePointsWhenDie: 0
-  timeToSelfDestroy: 15
+  timeToSelfDestroy: 120
   atackTarget: {fileID: 0}

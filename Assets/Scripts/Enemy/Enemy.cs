@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+  public float schetchik;
   public enum enemyTypeList
   {
   Light,
@@ -40,7 +41,6 @@ public class Enemy : MonoBehaviour
       givePointsWhenDie +=20;
       break;
     }
-    
     target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
   }
 
@@ -62,7 +62,10 @@ public class Enemy : MonoBehaviour
       {
       GameObject.FindGameObjectWithTag("Player").GetComponent<HightScore>().score += givePointsWhenDie;
       gameObject.GetComponent<CircleCollider2D>().enabled = false;
+      gameObject.GetComponent<SpriteRenderer>().color = Color.grey;
+      gameObject.GetComponent<SpriteRenderer>().sortingOrder -= 1;
       Invoke("DestroyEnemy", timeToSelfDestroy);
+      InvokeRepeating("HideEnemy", timeToSelfDestroy/2, timeToSelfDestroy/60/1.6f/2);
       }
     }
     if(collision.gameObject.tag == "Player")
@@ -71,6 +74,11 @@ public class Enemy : MonoBehaviour
     }
   }
   //destroy enemy object when work
+  void HideEnemy()
+  {
+    schetchik ++;
+    gameObject.GetComponent<SpriteRenderer>().color -= new Color(0,0,0,0.01f);
+  }
   void DestroyEnemy()
   {
     Destroy(gameObject);

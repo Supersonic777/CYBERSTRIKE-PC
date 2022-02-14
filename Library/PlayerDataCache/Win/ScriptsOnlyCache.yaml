@@ -592,7 +592,7 @@ ScriptsOnlyBuild:
     className: PlayerQuitHandler
   - hash:
       serializedVersion: 2
-      Hash: 586b49552c3dc45d4d4117db3d77a3a9
+      Hash: 26918371c87b10d77444c0ed0511af7f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Enemy

@@ -1087,6 +1087,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyHeavy
       objectReference: {fileID: 0}
+    - target: {fileID: 4606944854712059013, guid: 57a4a38275100d74eb934d49d1bb34a3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4606944854712059065, guid: 57a4a38275100d74eb934d49d1bb34a3,
         type: 3}
       propertyPath: m_RootOrder
@@ -2895,7 +2900,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &787919100
 Transform:
   m_ObjectHideFlags: 0
@@ -7343,7 +7348,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1994123244
 Transform:
   m_ObjectHideFlags: 0
@@ -8532,6 +8537,11 @@ PrefabInstance:
         type: 3}
       propertyPath: atackTarget
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 641399785599437317, guid: ed357ca09d3eb7342b788dfa3d20d23a,
+        type: 3}
+      propertyPath: timeToSelfDestroy
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 641399785599437375, guid: ed357ca09d3eb7342b788dfa3d20d23a,
         type: 3}
