@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class AmmoEnumerator : MonoBehaviour
 {
+    public int fullAmmo;
     public int ammo;
     public Text ammoEnumeratorText;
 
@@ -12,6 +13,7 @@ public class AmmoEnumerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+    
     ammo = GameObject.FindGameObjectWithTag("Gun").GetComponent<GunController>().ammoInMag;
     if(PlayerPrefs.HasKey("Ammo"))
     {
@@ -23,6 +25,6 @@ public class AmmoEnumerator : MonoBehaviour
     void Update()
     {
         PlayerPrefs.SetInt("Ammo", ammo);
-        ammoEnumeratorText.text = "Ammo: " + ammo;
+        ammoEnumeratorText.text = "Ammo: " + ammo + " | " + fullAmmo;
     }
 }

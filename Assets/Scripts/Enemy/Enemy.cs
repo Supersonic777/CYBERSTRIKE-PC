@@ -74,18 +74,6 @@ public class Enemy : MonoBehaviour
       Instantiate(blood, gameObject.transform.position, blood.transform.rotation);
     }
   }
-  //void OnCollisionStay2D(Collision2D collision)
-  //{
-  //  if(collision.gameObject.tag == "Player")
-   // {
-    //  Invoke("NearDamage", damageRate);
-  //  }
-    
-  //}
-  //void NearDamage()
-  //{
-   // GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().playerHealth -= damage;
-  //}
   void FarDamage()
   {
 
