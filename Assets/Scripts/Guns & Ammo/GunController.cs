@@ -91,18 +91,18 @@ public class GunController : MonoBehaviour
     }
     void Shot()
     {
-      ammoScatter = Random.Range(0 , gunAccuracy/2);
-      
-      if(maxAmmoScatter >= minAmmoScatter)
-      {  
-        firePoint.transform.Rotate(new Vector3(0, 0, -ammoScatter));
-        maxAmmoScatter -= ammoScatter;
-      }
-      else if(maxAmmoScatter <= minAmmoScatter)
-      {
-        firePoint.transform.Rotate(new Vector3(0, 0, +ammoScatter));
-        minAmmoScatter -= ammoScatter;
-      }
+      //ammoScatter = Random.Range(0 , gunAccuracy/2);
+      //
+      //if(maxAmmoScatter >= minAmmoScatter)
+      //{  
+      //  firePoint.transform.Rotate(new Vector3(0, 0, -ammoScatter));
+      //  maxAmmoScatter -= ammoScatter;
+      //}
+      //else if(maxAmmoScatter <= minAmmoScatter)
+      //{
+      //  firePoint.transform.Rotate(new Vector3(0, 0, +ammoScatter));
+      //  minAmmoScatter -= ammoScatter;
+      //}
       
       GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
       Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();

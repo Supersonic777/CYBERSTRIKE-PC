@@ -81,7 +81,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 3399468174605873881, guid: a5f89ec84bf03824c8fda417ef583d10,
     type: 3}
   reloadNotification: {fileID: 0}
-  bulletSpeed: 12
+  bulletSpeed: 1.9
   fireRate: 0.04
   allAmmo: 0
   ammoInMag: 35
