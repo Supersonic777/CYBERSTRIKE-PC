@@ -20,6 +20,7 @@ public class Enemy : MonoBehaviour
   public float attackDistance;
   public int givePointsWhenDie;
   public float timeToSelfDestroy;
+  public GameObject blood;
 
   private Transform target;
     //private PlayerController giveDamage = new PlayerController();
@@ -68,6 +69,9 @@ public class Enemy : MonoBehaviour
       //общего времени до уничтожения объекта 
       InvokeRepeating("HideEnemy", timeToSelfDestroy/2, timeToSelfDestroy/60/1.6f/2);
       }
+      blood.transform.position = gameObject.transform.position;
+      blood.transform.Rotate(0,0,Random.Range(-180,180));
+      Instantiate(blood, gameObject.transform.position, blood.transform.rotation);
     }
   }
   //void OnCollisionStay2D(Collision2D collision)
