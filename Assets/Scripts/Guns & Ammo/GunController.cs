@@ -29,21 +29,17 @@ public class GunController : MonoBehaviour
     public AudioClip reloadSound;
     AudioSource audioSrs;
 
-
     private int ammoInMagNow;
-    private float ammoScatter;
-    private float minAmmoScatter;
-    private float maxAmmoScatter;
-    private Quaternion nativeBulletRotation; //для хранения координат из начального положения пули
+
+    private Quaternion nativeRotation;
+ //для хранения координат из начального положения пули
 
     // Update is called once per frame
     void Start()
     {
+        nativeRotation.z = firePoint.transform.rotation.z;
         ammoInMagNow = ammoInMag;
         audioSrs = GetComponent<AudioSource>();
-        nativeBulletRotation = firePoint.rotation; //присваиваем начальное положени пули 
-        maxAmmoScatter = Random.Range(0 , gunAccuracy/2);
-        minAmmoScatter = Random.Range(0 , gunAccuracy/2);
     }
     void Update()
     {
@@ -91,23 +87,11 @@ public class GunController : MonoBehaviour
     }
     void Shot()
     {
-      //ammoScatter = Random.Range(0 , gunAccuracy/2);
-      //
-      //if(maxAmmoScatter >= minAmmoScatter)
-      //{  
-      //  firePoint.transform.Rotate(new Vector3(0, 0, -ammoScatter));
-      //  maxAmmoScatter -= ammoScatter;
-      //}
-      //else if(maxAmmoScatter <= minAmmoScatter)
-      //{
-      //  firePoint.transform.Rotate(new Vector3(0, 0, +ammoScatter));
-      //  minAmmoScatter -= ammoScatter;
-      //}
-      
+      firePoint.transform.localEulerAngles = new Vector3(0, 0 , Random.Range(nativeRotation.z - gunAccuracy/2+90, nativeRotation.z + gunAccuracy/2+90));
+
       GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
       Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
       rb.AddForce(firePoint.up * bulletSpeed, ForceMode2D.Impulse);
-  
     }
     void Reload()
     {

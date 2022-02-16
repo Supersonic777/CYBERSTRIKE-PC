@@ -1496,7 +1496,7 @@ PrefabInstance:
     - target: {fileID: 365858613774496412, guid: e657aabe99afa0b4e97144d61cee84ab,
         type: 3}
       propertyPath: gunAccuracy
-      value: 70
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 365858613774496412, guid: e657aabe99afa0b4e97144d61cee84ab,
         type: 3}
