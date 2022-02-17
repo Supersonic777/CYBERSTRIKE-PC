@@ -19,11 +19,13 @@ public class PlayerController : MonoBehaviour
 	public AudioClip walkSound;
 	public AudioClip runSound;
 	private float healthFill;
+	private GameObject reloadNotifier;
 	Vector2 movement;
 	Vector2 mousePos;
 	AudioSource playerAudioSrs;
 	void Start()
 	{
+		reloadNotifier = GetComponentInChildren<GunController>().reloadNotification;
         playerAudioSrs = GetComponent<AudioSource>();
 	}
 
@@ -40,7 +42,10 @@ public class PlayerController : MonoBehaviour
 		if(playerHealth<=0)
 		{
 			dieMessage.SetActive(true);
+			reloadNotifier.SetActive(false);
+			Time.timeScale = 0f;
 			gameObject.SetActive(false); //деактивирует игрока при обнулении HP
+
 		}
 	}
 	void FixedUpdate ()
