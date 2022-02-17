@@ -12,6 +12,7 @@ public class HightScore : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+      score = PlayerPrefs.GetInt("HightScore");  
       if(PlayerPrefs.HasKey("HightScore"))
       {
           PlayerPrefs.GetInt("HightScore");
@@ -22,6 +23,7 @@ public class HightScore : MonoBehaviour
     void Update()
     {
         PlayerPrefs.SetInt("HightScore", score);
+        PlayerPrefs.Save();
         hightScoreText.text = "HightScore: " + score;
     }
 }
