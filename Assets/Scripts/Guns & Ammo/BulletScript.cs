@@ -9,10 +9,10 @@ public class BulletScript : MonoBehaviour
 
    void Start()
    {
-         damage = GameObject.FindGameObjectWithTag("Gun").GetComponent<GunController>().gunDamage;
+      damage = GameObject.FindGameObjectWithTag("Gun").GetComponent<GunController>().gunDamage;
    }
    
-   void OnTriggerEnter2D(Collider2D collision)
+   void OnCollisionEnter2D(Collision2D collision)
    {
       if(collision.gameObject.tag != "Bullet" && collision.gameObject.tag != "Player")
       {

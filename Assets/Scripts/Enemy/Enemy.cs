@@ -22,6 +22,7 @@ public class Enemy : MonoBehaviour
   public float timeToSelfDestroy;
   public GameObject blood;
 
+  private GameObject player;
   private Transform target;
     //private PlayerController giveDamage = new PlayerController();
   void Start()
@@ -41,6 +42,7 @@ public class Enemy : MonoBehaviour
       givePointsWhenDie +=20;
       break;
     }
+    player = GameObject.FindGameObjectWithTag("Player");
     target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
   }
 
@@ -60,7 +62,7 @@ public class Enemy : MonoBehaviour
     {
       if(health <=0)
       {
-      GameObject.FindGameObjectWithTag("Player").GetComponent<HightScore>().score += givePointsWhenDie;
+      player.GetComponent<HightScore>().score += givePointsWhenDie;
       gameObject.GetComponent<CircleCollider2D>().enabled = false;
       gameObject.GetComponent<SpriteRenderer>().color = Color.grey;
       gameObject.GetComponent<SpriteRenderer>().sortingOrder -= 1;
