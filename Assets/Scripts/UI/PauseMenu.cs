@@ -10,6 +10,11 @@ public class PauseMenu : MonoBehaviour
   public GameObject player;
   public GameObject optionsMenu;
   public GameObject dieMessage;
+  private GameObject playerHealth;
+    void Start()
+    {
+        playerHealth = GameObject.FindGameObjectWithTag("Player");
+    }
     // Update is called once per frame
     void Update()
     {
@@ -31,7 +36,10 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     { 
-      dieMessage.SetActive(true);
+      if(playerHealth.GetComponent<PlayerController>().playerHealth <= 0)
+      {
+        dieMessage.SetActive(true);
+      }
       pauseMenuUI.SetActive(false);
       player.SetActive(true);
       Time.timeScale = 1f;

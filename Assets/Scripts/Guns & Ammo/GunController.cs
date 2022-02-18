@@ -29,6 +29,7 @@ public class GunController : MonoBehaviour
     public AudioClip reloadSound;
     AudioSource audioSrs;
 
+    private bool isReloading;
     private int ammoInMagNow;
 
     private Quaternion nativeRotation;
@@ -76,8 +77,9 @@ public class GunController : MonoBehaviour
       }
       }
       //блок управления перезарядкой
-      if (ammoInMagNow != ammoInMag && Input.GetKeyDown(KeyCode.R))
+      if (ammoInMagNow != ammoInMag && Input.GetKeyDown(KeyCode.R) && isReloading != true)
       { //здесь задаете  любую кнопку
+        isReloading = true;
         ammoInMagNow = 0;
         reloadNotification.SetActive(true);
         audioSrs.PlayOneShot(reloadSound);
@@ -98,5 +100,6 @@ public class GunController : MonoBehaviour
       reloadNotification.SetActive(false);
       ammoInMagNow = ammoInMag;
       gameObject.GetComponent<AmmoEnumerator>().ammo = ammoInMag;
+      isReloading = false;
     }
 }
