@@ -1632,7 +1632,7 @@ PrefabInstance:
     - target: {fileID: 365858614714564678, guid: e657aabe99afa0b4e97144d61cee84ab,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 365858614768197431, guid: e657aabe99afa0b4e97144d61cee84ab,
         type: 3}
@@ -1643,6 +1643,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 365858615005281717, guid: e657aabe99afa0b4e97144d61cee84ab,
+        type: 3}
+      propertyPath: fireRate
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 365858615005281717, guid: e657aabe99afa0b4e97144d61cee84ab,
+        type: 3}
+      propertyPath: ammoInMag
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 365858615005281717, guid: e657aabe99afa0b4e97144d61cee84ab,
+        type: 3}
+      propertyPath: gunDamage
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 365858615005281717, guid: e657aabe99afa0b4e97144d61cee84ab,
         type: 3}
@@ -1682,7 +1697,7 @@ PrefabInstance:
     - target: {fileID: 365858615005281721, guid: e657aabe99afa0b4e97144d61cee84ab,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 365858615005281723, guid: e657aabe99afa0b4e97144d61cee84ab,
         type: 3}
@@ -3616,7 +3631,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963759844}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.6787186, y: 0.23741245, z: 0}
+  m_LocalPosition: {x: 6.97, y: 0.32, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 846032003}
@@ -3636,13 +3651,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 1
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.5
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_FalloffIntensity: 0.7
+  m_Color: {r: 0.6556604, g: 0.7815136, b: 1, a: 1}
+  m_Intensity: 1.5
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
-  m_UseNormalMap: 0
+  m_UseNormalMap: 1
   m_LightOrder: 0
   m_AlphaBlendOnOverlap: 0
   m_ShadowIntensity: 0
@@ -3652,26 +3667,27 @@ MonoBehaviour:
   m_PointLightInnerRadius: 0
   m_PointLightOuterRadius: 1
   m_PointLightDistance: 3
-  m_PointLightQuality: 1
+  m_PointLightQuality: 0
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 0.5
-  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapeLightFalloffSize: 4
+  m_ShapeLightFalloffOffset: {x: -1.1, y: 0}
   m_ShapePath:
-  - {x: -1.4659882, y: -0.22831583, z: 0}
-  - {x: 4.7714787, y: -2.3263211, z: 0}
-  - {x: 5.146902, y: -2.0149903, z: 0}
-  - {x: 5.463871, y: -1.5923705, z: 0}
-  - {x: 5.720459, y: -1.0640955, z: 0}
-  - {x: 5.8412056, y: -0.5056348, z: 0}
-  - {x: 5.873308, y: 0.047193527, z: 0}
-  - {x: 5.8110237, y: 0.5961952, z: 0}
-  - {x: 5.70537, y: 1.1244702, z: 0}
-  - {x: 5.463869, y: 1.5621829, z: 0}
-  - {x: 5.1770935, y: 1.9244285, z: 0}
-  - {x: 4.829939, y: 2.1659255, z: 0}
-  - {x: 4.3752193, y: 2.3716016, z: 0}
+  - {x: 0.024333954, y: -0.06272459, z: 0}
+  - {x: 8.01977, y: -2.7297702, z: 0}
+  - {x: 8.867426, y: -2.4659786, z: 0}
+  - {x: 9.25, y: -1.96, z: 0}
+  - {x: 9.831308, y: -1.0201564, z: 0}
+  - {x: 10.030729, y: -0.5713978, z: 0}
+  - {x: 10.161066, y: 0.11114788, z: 0}
+  - {x: 10.178854, y: 0.95106506, z: 0}
+  - {x: 10.051622, y: 1.5960932, z: 0}
+  - {x: 9.845079, y: 2.0642643, z: 0}
+  - {x: 9.597223, y: 2.5324345, z: 0}
+  - {x: 9.25, y: 3.04, z: 0}
+  - {x: 8.826117, y: 3.5651655, z: 0}
+  - {x: 7.9170475, y: 3.7652254, z: 0}
 --- !u!4 &983187910 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5761488198866335369, guid: d5944c128dece24488219d7d93e8fd8c,
