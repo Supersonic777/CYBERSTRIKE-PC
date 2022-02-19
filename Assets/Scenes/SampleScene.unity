@@ -180,7 +180,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -376,7 +376,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -500,7 +500,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -588,7 +588,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -693,6 +693,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnergyDrink (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 3600020577574857095, guid: f727db3f6c813e64bb73494851411b4c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f727db3f6c813e64bb73494851411b4c, type: 3}
 --- !u!1 &234535505
@@ -791,7 +796,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -956,6 +961,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnergyDrink (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 3600020577574857095, guid: f727db3f6c813e64bb73494851411b4c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f727db3f6c813e64bb73494851411b4c, type: 3}
 --- !u!4 &346330782 stripped
@@ -977,6 +987,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1373018112}
     m_Modifications:
+    - target: {fileID: 4810576747891389895, guid: 2a3f0021f32d89744ac93200d5e21879,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
     - target: {fileID: 4810576747891389944, guid: 2a3f0021f32d89744ac93200d5e21879,
         type: 3}
       propertyPath: m_RootOrder
@@ -1089,7 +1104,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1128,6 +1143,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1184609229}
     m_Modifications:
+    - target: {fileID: 4107961324794499750, guid: 42eb48a17513e7d4eaae23e09a064470,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
     - target: {fileID: 4107961324794499751, guid: 42eb48a17513e7d4eaae23e09a064470,
         type: 3}
       propertyPath: m_RootOrder
@@ -1226,7 +1246,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1364,6 +1384,11 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.764151
       objectReference: {fileID: 0}
+    - target: {fileID: 5761488198866335382, guid: d5944c128dece24488219d7d93e8fd8c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5944c128dece24488219d7d93e8fd8c, type: 3}
 --- !u!1 &450641257
@@ -1468,6 +1493,11 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 365858613774496386, guid: e657aabe99afa0b4e97144d61cee84ab,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
     - target: {fileID: 365858613774496387, guid: e657aabe99afa0b4e97144d61cee84ab,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1524,6 +1554,11 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 365858614417996039, guid: e657aabe99afa0b4e97144d61cee84ab,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
     - target: {fileID: 365858614417996042, guid: e657aabe99afa0b4e97144d61cee84ab,
         type: 3}
       propertyPath: bar
@@ -1549,6 +1584,11 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 365858614714564672, guid: e657aabe99afa0b4e97144d61cee84ab,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
     - target: {fileID: 365858614714564674, guid: e657aabe99afa0b4e97144d61cee84ab,
         type: 3}
       propertyPath: fireMode
@@ -1619,6 +1659,11 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 365858615005281723, guid: e657aabe99afa0b4e97144d61cee84ab,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
     - target: {fileID: 895739731161795400, guid: e657aabe99afa0b4e97144d61cee84ab,
         type: 3}
       propertyPath: m_RootOrder
@@ -1842,6 +1887,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1184609229}
     m_Modifications:
+    - target: {fileID: 4107961324794499750, guid: 42eb48a17513e7d4eaae23e09a064470,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
     - target: {fileID: 4107961324794499751, guid: 42eb48a17513e7d4eaae23e09a064470,
         type: 3}
       propertyPath: m_RootOrder
@@ -2050,6 +2100,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnergyDrink (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3600020577574857095, guid: f727db3f6c813e64bb73494851411b4c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f727db3f6c813e64bb73494851411b4c, type: 3}
 --- !u!1 &550426855
@@ -2102,7 +2157,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2265,7 +2320,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2479,6 +2534,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnergyDrink (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3600020577574857095, guid: f727db3f6c813e64bb73494851411b4c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f727db3f6c813e64bb73494851411b4c, type: 3}
 --- !u!4 &683119983 stripped
@@ -2554,6 +2614,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnergyDrink (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 3600020577574857095, guid: f727db3f6c813e64bb73494851411b4c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f727db3f6c813e64bb73494851411b4c, type: 3}
 --- !u!4 &760783956 stripped
@@ -2612,7 +2677,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2694,7 +2759,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2869,6 +2934,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree1Final (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5761488198866335382, guid: d5944c128dece24488219d7d93e8fd8c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5944c128dece24488219d7d93e8fd8c, type: 3}
 --- !u!1 &846031996 stripped
@@ -3054,6 +3124,11 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.49474904
       objectReference: {fileID: 0}
+    - target: {fileID: 5761488198866335382, guid: d5944c128dece24488219d7d93e8fd8c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5944c128dece24488219d7d93e8fd8c, type: 3}
 --- !u!1001 &897760816
@@ -3123,6 +3198,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnergyDrink (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 3600020577574857095, guid: f727db3f6c813e64bb73494851411b4c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f727db3f6c813e64bb73494851411b4c, type: 3}
 --- !u!4 &901853155 stripped
@@ -3138,6 +3218,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1184609229}
     m_Modifications:
+    - target: {fileID: 4107961324794499750, guid: 42eb48a17513e7d4eaae23e09a064470,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
     - target: {fileID: 4107961324794499751, guid: 42eb48a17513e7d4eaae23e09a064470,
         type: 3}
       propertyPath: m_RootOrder
@@ -3289,7 +3374,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3363,6 +3448,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1184609229}
     m_Modifications:
+    - target: {fileID: 4107961324794499750, guid: 42eb48a17513e7d4eaae23e09a064470,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
     - target: {fileID: 4107961324794499751, guid: 42eb48a17513e7d4eaae23e09a064470,
         type: 3}
       propertyPath: m_RootOrder
@@ -3504,6 +3594,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnergyDrink (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 3600020577574857095, guid: f727db3f6c813e64bb73494851411b4c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f727db3f6c813e64bb73494851411b4c, type: 3}
 --- !u!1001 &1016042083
@@ -3513,6 +3608,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1373018112}
     m_Modifications:
+    - target: {fileID: 4810576747891389895, guid: 2a3f0021f32d89744ac93200d5e21879,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
     - target: {fileID: 4810576747891389944, guid: 2a3f0021f32d89744ac93200d5e21879,
         type: 3}
       propertyPath: m_RootOrder
@@ -3582,6 +3682,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1184609229}
     m_Modifications:
+    - target: {fileID: 4107961324794499750, guid: 42eb48a17513e7d4eaae23e09a064470,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
     - target: {fileID: 4107961324794499751, guid: 42eb48a17513e7d4eaae23e09a064470,
         type: 3}
       propertyPath: m_RootOrder
@@ -3742,7 +3847,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3781,6 +3886,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1184609229}
     m_Modifications:
+    - target: {fileID: 4107961324794499750, guid: 42eb48a17513e7d4eaae23e09a064470,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
     - target: {fileID: 4107961324794499751, guid: 42eb48a17513e7d4eaae23e09a064470,
         type: 3}
       propertyPath: m_RootOrder
@@ -3923,7 +4033,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4091,7 +4201,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4173,7 +4283,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4294,6 +4404,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1184609229}
     m_Modifications:
+    - target: {fileID: 4107961324794499750, guid: 42eb48a17513e7d4eaae23e09a064470,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
     - target: {fileID: 4107961324794499751, guid: 42eb48a17513e7d4eaae23e09a064470,
         type: 3}
       propertyPath: m_RootOrder
@@ -4363,6 +4478,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1184609229}
     m_Modifications:
+    - target: {fileID: 4107961324794499750, guid: 42eb48a17513e7d4eaae23e09a064470,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
     - target: {fileID: 4107961324794499751, guid: 42eb48a17513e7d4eaae23e09a064470,
         type: 3}
       propertyPath: m_RootOrder
@@ -4523,6 +4643,11 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5761488198866335382, guid: d5944c128dece24488219d7d93e8fd8c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5944c128dece24488219d7d93e8fd8c, type: 3}
 --- !u!1 &1284410171 stripped
@@ -5000,7 +5125,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5082,7 +5207,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5341,7 +5466,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5549,7 +5674,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5668,6 +5793,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnergyDrink (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 3600020577574857095, guid: f727db3f6c813e64bb73494851411b4c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f727db3f6c813e64bb73494851411b4c, type: 3}
 --- !u!1001 &1487213380
@@ -5677,6 +5807,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1184609229}
     m_Modifications:
+    - target: {fileID: 4107961324794499750, guid: 42eb48a17513e7d4eaae23e09a064470,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
     - target: {fileID: 4107961324794499751, guid: 42eb48a17513e7d4eaae23e09a064470,
         type: 3}
       propertyPath: m_RootOrder
@@ -5746,6 +5881,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1184609229}
     m_Modifications:
+    - target: {fileID: 4107961324794499750, guid: 42eb48a17513e7d4eaae23e09a064470,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
     - target: {fileID: 4107961324794499751, guid: 42eb48a17513e7d4eaae23e09a064470,
         type: 3}
       propertyPath: m_RootOrder
@@ -5892,7 +6032,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5991,6 +6131,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnergyDrink (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 3600020577574857095, guid: f727db3f6c813e64bb73494851411b4c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f727db3f6c813e64bb73494851411b4c, type: 3}
 --- !u!1 &1578462847
@@ -6043,7 +6188,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6196,6 +6341,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnergyDrink (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3600020577574857095, guid: f727db3f6c813e64bb73494851411b4c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f727db3f6c813e64bb73494851411b4c, type: 3}
 --- !u!4 &1700132866 stripped
@@ -6470,6 +6620,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1184609229}
     m_Modifications:
+    - target: {fileID: 4107961324794499750, guid: 42eb48a17513e7d4eaae23e09a064470,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
     - target: {fileID: 4107961324794499751, guid: 42eb48a17513e7d4eaae23e09a064470,
         type: 3}
       propertyPath: m_RootOrder
@@ -6822,6 +6977,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnergyDrink (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3600020577574857095, guid: f727db3f6c813e64bb73494851411b4c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f727db3f6c813e64bb73494851411b4c, type: 3}
 --- !u!1 &1934677009
@@ -6951,6 +7111,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnergyDrink (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3600020577574857095, guid: f727db3f6c813e64bb73494851411b4c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f727db3f6c813e64bb73494851411b4c, type: 3}
 --- !u!1 &1958922256 stripped
@@ -6997,7 +7162,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1994123244
 Transform:
   m_ObjectHideFlags: 0
@@ -7127,6 +7292,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1184609229}
     m_Modifications:
+    - target: {fileID: 4107961324794499750, guid: 42eb48a17513e7d4eaae23e09a064470,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
     - target: {fileID: 4107961324794499751, guid: 42eb48a17513e7d4eaae23e09a064470,
         type: 3}
       propertyPath: m_RootOrder
@@ -7239,7 +7409,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7351,7 +7521,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7390,6 +7560,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1373018112}
     m_Modifications:
+    - target: {fileID: 4810576747891389895, guid: 2a3f0021f32d89744ac93200d5e21879,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
     - target: {fileID: 4810576747891389944, guid: 2a3f0021f32d89744ac93200d5e21879,
         type: 3}
       propertyPath: m_RootOrder
@@ -7465,6 +7640,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1184609229}
     m_Modifications:
+    - target: {fileID: 4107961324794499750, guid: 42eb48a17513e7d4eaae23e09a064470,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
     - target: {fileID: 4107961324794499751, guid: 42eb48a17513e7d4eaae23e09a064470,
         type: 3}
       propertyPath: m_RootOrder
@@ -7577,7 +7757,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7616,6 +7796,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1373018112}
     m_Modifications:
+    - target: {fileID: 4810576747891389895, guid: 2a3f0021f32d89744ac93200d5e21879,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
     - target: {fileID: 4810576747891389944, guid: 2a3f0021f32d89744ac93200d5e21879,
         type: 3}
       propertyPath: m_RootOrder
@@ -7755,6 +7940,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree1Final (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5761488198866335382, guid: d5944c128dece24488219d7d93e8fd8c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5944c128dece24488219d7d93e8fd8c, type: 3}
 --- !u!4 &2124336159 stripped
@@ -7830,6 +8020,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnergyDrink
       objectReference: {fileID: 0}
+    - target: {fileID: 3600020577574857095, guid: f727db3f6c813e64bb73494851411b4c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f727db3f6c813e64bb73494851411b4c, type: 3}
 --- !u!1 &2132651164 stripped
@@ -7903,7 +8098,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8102,6 +8297,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1373018112}
     m_Modifications:
+    - target: {fileID: 4810576747891389895, guid: 2a3f0021f32d89744ac93200d5e21879,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
     - target: {fileID: 4810576747891389944, guid: 2a3f0021f32d89744ac93200d5e21879,
         type: 3}
       propertyPath: m_RootOrder
@@ -8623,6 +8823,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree1Final
       objectReference: {fileID: 0}
+    - target: {fileID: 5761488198866335382, guid: d5944c128dece24488219d7d93e8fd8c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5944c128dece24488219d7d93e8fd8c, type: 3}
 --- !u!1001 &5948651486286125679
@@ -8836,6 +9041,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 9.608001
       objectReference: {fileID: 0}
+    - target: {fileID: 6334197193761210921, guid: a2fab37074c87224f8a886eaeea4133f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
     - target: {fileID: 6334197193761210922, guid: a2fab37074c87224f8a886eaeea4133f,
         type: 3}
       propertyPath: m_Name
@@ -8916,5 +9126,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 44.458004
       objectReference: {fileID: 0}
+    - target: {fileID: 9135504976086538084, guid: 8309e7870d9847744a9158352ad20fef,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e896004d995cd441a765dd45c0dfee8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8309e7870d9847744a9158352ad20fef, type: 3}
