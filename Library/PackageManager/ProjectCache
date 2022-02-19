@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637808598047590620
-    m_Hash: 4086306028
+      ticks: 637808700027076862
+    m_Hash: 3131204679
   m_LockFileStatus:
     m_FilePath: C:/Projects/Unity Projects/Cyberstrike/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637808598047666825
-    m_Hash: 3266030487
+      ticks: 637808700027149180
+    m_Hash: 826908478
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -637,12 +637,12 @@ m_PackageAssets:
         url: 
         revision: 
         path: 
-    - packageId: com.unity.collab-proxy@1.15.7
+    - packageId: com.unity.collab-proxy@1.15.13
       testable: 0
       isDirectDependency: 1
-      version: 1.15.7
+      version: 1.15.13
       source: 1
-      resolvedPath: C:\Projects\Unity Projects\Cyberstrike\Library\PackageCache\com.unity.collab-proxy@1.15.7
+      resolvedPath: C:\Projects\Unity Projects\Cyberstrike\Library\PackageCache\com.unity.collab-proxy@1.15.13
       assetPath: Packages/com.unity.collab-proxy
       name: com.unity.collab-proxy
       displayName: Version Control
@@ -726,13 +726,9 @@ m_PackageAssets:
         - 2.1.0-preview.6
         verified: 1.15.13
       dependencies:
-      - name: com.unity.nuget.newtonsoft-json
-        version: 2.0.0
       - name: com.unity.services.core
         version: 1.0.1
       resolvedDependencies:
-      - name: com.unity.nuget.newtonsoft-json
-        version: 2.0.0
       - name: com.unity.services.core
         version: 1.0.1
       - name: com.unity.modules.unitywebrequest
@@ -763,13 +759,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637744672890000000
+      datePublishedTicks: 637807003040000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/com.unity.cloud.collaborate.git
-        revision: d208594e5483cdf10d303b6ee17df4d6bf58d3de
+        revision: 825774911ad2d1440ac844c9be1ae2c9b5dc7966
         path: 
     - packageId: com.unity.ide.rider@2.0.7
       testable: 0
@@ -3865,82 +3861,6 @@ m_PackageAssets:
         url: https://github.com/Unity-Technologies/Graphics.git
         revision: 31a193989d1e4e18ec3dced0f45168f8d2552a9a
         path: 
-    - packageId: com.unity.nuget.newtonsoft-json@2.0.0
-      testable: 0
-      isDirectDependency: 0
-      version: 2.0.0
-      source: 1
-      resolvedPath: C:\Projects\Unity Projects\Cyberstrike\Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0
-      assetPath: Packages/com.unity.nuget.newtonsoft-json
-      name: com.unity.nuget.newtonsoft-json
-      displayName: Newtonsoft Json
-      author:
-        name: 
-        email: 
-        url: 
-      category: 
-      type: 
-      description: 'Newtonsoft Json for use in Unity projects and Unity packages.
-        Currently synced to version 12.0.2.
-
-
-        This package is used for advanced
-        json serialization and deserialization. Most Unity users will be better suited
-        using the existing json tools built into Unity.
-
-        To avoid assembly
-        clashes, please use this package if you intend to use Newtonsoft Json.'
-      status: 4
-      errors: []
-      versions:
-        all:
-        - 1.0.0-preview.2
-        - 1.0.0-preview.3
-        - 1.0.0-preview.4
-        - 1.0.1-preview.1
-        - 1.1.2
-        - 2.0.0-preview
-        - 2.0.0-preview.1
-        - 2.0.0-preview.2
-        - 2.0.0
-        - 2.0.1-preview.1
-        - 2.0.2
-        compatible:
-        - 1.0.0-preview.2
-        - 1.0.0-preview.3
-        - 1.0.0-preview.4
-        - 1.0.1-preview.1
-        - 1.1.2
-        - 2.0.0-preview
-        - 2.0.0-preview.1
-        - 2.0.0-preview.2
-        - 2.0.0
-        - 2.0.1-preview.1
-        - 2.0.2
-        verified: 2.0.2
-      dependencies: []
-      resolvedDependencies: []
-      keywords: []
-      registry:
-        id: main
-        name: 
-        url: https://packages.unity.com
-        scopes: []
-        isDefault: 1
-        capabilities: 7
-      hasRegistry: 1
-      hideInEditor: 1
-      entitlements:
-        isAllowed: 1
-      isAssetStorePackage: 0
-      datePublishedTicks: 637237898320000000
-      documentationUrl: 
-      hasRepository: 1
-      repository:
-        type: git
-        url: https://github.cds.internal.unity3d.com/unity/com.unity.nuget.newtonsoft-json.git
-        revision: d2fd6ed876261bbd82f59199ad711e7667bf633a
-        path: 
     - packageId: com.unity.services.core@1.0.1
       testable: 0
       isDirectDependency: 0
@@ -4196,9 +4116,37 @@ m_PackageAssets:
       errors: []
       versions:
         all:
+        - 4.0.0-preview
+        - 4.0.0
+        - 4.0.7-preview
+        - 4.0.7
+        - 4.0.8-preview
+        - 4.0.9
+        - 4.1.0-preview
+        - 4.1.0
+        - 4.2.0
+        - 4.3.0
+        - 4.3.1
         - 4.3.2
+        - 4.6.0-preview
+        - 4.7.0-preview
+        - 4.9.1
         compatible:
+        - 4.0.0-preview
+        - 4.0.0
+        - 4.0.7-preview
+        - 4.0.7
+        - 4.0.8-preview
+        - 4.0.9
+        - 4.1.0-preview
+        - 4.1.0
+        - 4.2.0
+        - 4.3.0
+        - 4.3.1
         - 4.3.2
+        - 4.6.0-preview
+        - 4.7.0-preview
+        - 4.9.1
         verified: 4.3.2
       dependencies: []
       resolvedDependencies: []
@@ -4217,7 +4165,7 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637509898070000000
       documentationUrl: 
       hasRepository: 1
       repository:
