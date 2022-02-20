@@ -62,11 +62,11 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.UI.DebugUIHandlerVector4
     - UnityEngine.Rendering.UI.UIFoldout
     Unity.RenderPipelines.Universal.Editor.dll:
-    - UnityEditor.Experimental.Rendering.Universal.Path2D.ScriptablePathInspector
     - UnityEditor.Rendering.Universal.UniversalProjectSettings
     Unity.RenderPipelines.Universal.Runtime.dll:
     - UnityEngine.Experimental.Rendering.Universal.Light2D
     - UnityEngine.Experimental.Rendering.Universal.Renderer2DData
+    - UnityEngine.Experimental.Rendering.Universal.ShadowCaster2D
     - UnityEngine.Rendering.Universal.PostProcessData
     - UnityEngine.Rendering.Universal.UniversalAdditionalCameraData
     - UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset
@@ -237,6 +237,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 28
       Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
     - Class: 50
@@ -277,6 +279,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 2668}
     - Class: 114
       Script: {instanceID: 2732}
+    - Class: 114
+      Script: {instanceID: 3042}
     - Class: 114
       Script: {instanceID: 3136}
     - Class: 114
@@ -428,7 +432,7 @@ ScriptsOnlyBuild:
     className: DepthOfField
   - hash:
       serializedVersion: 2
-      Hash: e66160e71c8b61d37d0df6694894d7ed
+      Hash: d1f347ec5c06d216f620a83559193df2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
