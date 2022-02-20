@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
 	public float acceleration = 6f;
 	public float staminaFill = 1f;
 	public GameObject dieMessage;
+	public GameObject flashlight;
 	public Rigidbody2D rb;
 	public Camera cam;
 	public Image bar;
@@ -20,11 +21,13 @@ public class PlayerController : MonoBehaviour
 	public AudioClip runSound;
 	private float healthFill;
 	private GameObject reloadNotifier;
+	private bool flashlightIsActive;
 	Vector2 movement;
 	Vector2 mousePos;
 	AudioSource playerAudioSrs;
 	void Start()
 	{
+		flashlightIsActive = false;
 		reloadNotifier = GetComponentInChildren<GunController>().reloadNotification;
         playerAudioSrs = GetComponent<AudioSource>();
 	}
@@ -46,6 +49,16 @@ public class PlayerController : MonoBehaviour
 			Time.timeScale = 0f;
 			gameObject.SetActive(false); //деактивирует игрока при обнулении HP
 
+		}
+		if(Input.GetKeyDown(KeyCode.F) && flashlightIsActive == false)
+		{
+           flashlight.SetActive(true);
+		   flashlightIsActive = true;
+		}
+		else if(Input.GetKeyDown(KeyCode.F) && flashlightIsActive == true)
+		{
+           flashlight.SetActive(false);
+		   flashlightIsActive = false;
 		}
 	}
 	void FixedUpdate ()

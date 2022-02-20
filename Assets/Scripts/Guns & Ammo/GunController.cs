@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class GunController : MonoBehaviour
 {
     public enum fireModeList
@@ -38,9 +39,9 @@ public class GunController : MonoBehaviour
     // Update is called once per frame
     void Start()
     {
-        nativeRotation.z = firePoint.transform.rotation.z;
-        ammoInMagNow = ammoInMag;
-        audioSrs = GetComponent<AudioSource>();
+      nativeRotation.z = firePoint.transform.rotation.z;
+      ammoInMagNow = ammoInMag;
+      audioSrs = GetComponent<AudioSource>();
     }
     void Update()
     {
