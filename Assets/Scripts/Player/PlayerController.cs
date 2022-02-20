@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
 	public Image stamina;
 	public AudioClip walkSound;
 	public AudioClip runSound;
+	public AudioClip fleshlightSound;
 	private float healthFill;
 	private GameObject reloadNotifier;
 	private bool flashlightIsActive;
@@ -53,11 +54,13 @@ public class PlayerController : MonoBehaviour
 		if(Input.GetKeyDown(KeyCode.F) && flashlightIsActive == false)
 		{
            flashlight.SetActive(true);
+           playerAudioSrs.PlayOneShot(fleshlightSound);
 		   flashlightIsActive = true;
 		}
 		else if(Input.GetKeyDown(KeyCode.F) && flashlightIsActive == true)
 		{
            flashlight.SetActive(false);
+           playerAudioSrs.PlayOneShot(fleshlightSound);
 		   flashlightIsActive = false;
 		}
 	}
