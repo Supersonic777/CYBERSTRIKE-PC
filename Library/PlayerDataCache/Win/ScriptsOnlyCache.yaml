@@ -62,7 +62,6 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.UI.DebugUIHandlerVector4
     - UnityEngine.Rendering.UI.UIFoldout
     Unity.RenderPipelines.Universal.Editor.dll:
-    - UnityEditor.Experimental.Rendering.Universal.Path2D.ScriptablePathInspector
     - UnityEditor.Rendering.Universal.UniversalProjectSettings
     Unity.RenderPipelines.Universal.Runtime.dll:
     - UnityEngine.Experimental.Rendering.Universal.Light2D

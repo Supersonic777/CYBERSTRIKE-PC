@@ -14,6 +14,7 @@ TagManager:
   - DeadEnemy
   - Supply
   - Enviroment
+  - Ammo
   layers:
   - Default
   - TransparentFX

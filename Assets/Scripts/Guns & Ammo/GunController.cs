@@ -42,6 +42,7 @@ public class GunController : MonoBehaviour
       nativeRotation.z = firePoint.transform.rotation.z;
       ammoInMagNow = ammoInMag;
       audioSrs = GetComponent<AudioSource>();
+      allAmmo = ammoInMag*2;
     }
     void Update()
     {
@@ -102,5 +103,6 @@ public class GunController : MonoBehaviour
       ammoInMagNow = ammoInMag;
       gameObject.GetComponent<AmmoEnumerator>().ammo = ammoInMag;
       isReloading = false;
+      allAmmo -= ammoInMag;
     }
 }
