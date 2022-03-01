@@ -78,7 +78,6 @@ public class PlayerController : MonoBehaviour
 			   else
 			   {
 			    	rb.MovePosition(rb.position +  movement * speed * Time.fixedDeltaTime);
-			        //staminaFill +=0.001f;
 			   }
 		   }
 	
@@ -96,33 +95,9 @@ public class PlayerController : MonoBehaviour
 		{
 		   staminaFill +=0.004f;
 		}
-		   Vector2 lookDir = mousePos - rb.position;
-		   float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;  //+-90 градусов
-		   rb.rotation = angle;
+		Vector2 lookDir = mousePos - rb.position;
+		float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;  //+-90 градусов
+		rb.rotation = angle;
 	}
 
 }	
-
-
-	/*void OnCollisionEnter2D(Collision2D enemy)
-{
-    if (enemy.gameObject.tag == "Enemy")
-        StartCoroutine(ToDamage());
-}
-
-/*void OnCollisionExit2D(Collision2D enemy)
-{
-    if (enemy.gameObject.tag == "Enemy")
-        StopAllCoroutines();
-}
-
-private IEnumerator ToDamage()
-{
-    //Отнимаем 1ед здоровья пока здоровье есть или пока корутина не будет остановлена
-    while ( health > 0)
-    {
-        health -= 5;
-        yield return new WaitForSeconds(0.4f);
-    }
-}*/
-

@@ -54,10 +54,11 @@
      <Compile Include="Assets\Scripts\Enemy\DamageArea.cs" />
      <Compile Include="Assets\Scripts\SelfDestroy.cs" />
      <Compile Include="Assets\Scripts\Guns &amp; Ammo\AmmoEnumerator.cs" />
+     <Compile Include="Assets\Scripts\Guns &amp; Ammo\AmmoPack.cs" />
      <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
      <Compile Include="Assets\Scripts\UI\GameMenu.cs" />
      <Compile Include="Assets\Scripts\Archive\ShotSound.cs" />
-     <Compile Include="Assets\Scripts\Guns &amp; Ammo\AmmoPack.cs" />
+     <Compile Include="Assets\Scripts\Camera\LiteCameraFollow.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.26f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
