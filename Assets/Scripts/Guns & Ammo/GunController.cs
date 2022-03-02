@@ -19,8 +19,8 @@ public class GunController : MonoBehaviour
     //public bool isInRightHand;
     public float bulletSpeed;
     public float fireRate;
-    public int allAmmo;
     public int ammoInMag;
+    public int allAmmo;
     public int shootgunFraction;
     public float reloadSpeed;
     public float gunDamage;
@@ -29,7 +29,6 @@ public class GunController : MonoBehaviour
     public AudioClip shot;
     public AudioClip reloadSound;
     AudioSource audioSrs;
-
     private bool isReloading;
     private int ammoInMagNow;
 
