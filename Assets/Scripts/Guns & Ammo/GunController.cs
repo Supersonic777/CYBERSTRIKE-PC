@@ -85,7 +85,6 @@ public class GunController : MonoBehaviour
         ammoInMagNow = 0;
         reloadNotification.SetActive(true);
         audioSrs.PlayOneShot(reloadSound);
-        //Invoke("Shot", reloadSpeed);
         Invoke("Reload", reloadSpeed);
       }
       else if(ammoInMagNow == 0 && isReloading != true)

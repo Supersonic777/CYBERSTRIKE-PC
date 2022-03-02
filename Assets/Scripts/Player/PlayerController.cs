@@ -99,5 +99,4 @@ public class PlayerController : MonoBehaviour
 		float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;  //+-90 градусов
 		rb.rotation = angle;
 	}
-
 }	
