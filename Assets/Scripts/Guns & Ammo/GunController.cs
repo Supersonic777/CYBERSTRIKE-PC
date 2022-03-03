@@ -16,6 +16,7 @@ public class GunController : MonoBehaviour
     public Transform firePoint;
     public GameObject bulletPrefab;
     public GameObject reloadNotification;
+    public GameObject gunFlashbang;
     //public bool isInRightHand;
     public float bulletSpeed;
     public float fireRate;
@@ -38,6 +39,7 @@ public class GunController : MonoBehaviour
     // Update is called once per frame
     void Start()
     {
+      gunFlashbang.transform.position = firePoint.position;
       nativeRotation.z = firePoint.transform.rotation.z;
       ammoInMagNow = ammoInMag;
       audioSrs = GetComponent<AudioSource>();
@@ -47,35 +49,35 @@ public class GunController : MonoBehaviour
     {
       if(ammoInMagNow > 0)
       {
-      //блок управления стрельбой обыкновенного пистолета
-      if (Input.GetButtonDown("Fire1") && fireMode == fireModeList.Single)
-      {
-        Shot();
-        audioSrs.PlayOneShot(shot);
-        ammoInMagNow--;
-        gameObject.GetComponent<AmmoEnumerator>().ammo --;
-      }
-        //блок управления стрельбой пистолета-пулемёта
-      if(Input.GetButton("Fire1") && fireMode == fireModeList.Auto)
-      {
-        if(!IsInvoking("Shot")) 
+        //блок управления стрельбой обыкновенного пистолета
+        if (Input.GetButtonDown("Fire1") && fireMode == fireModeList.Single)
         {
+          Shot();
+          audioSrs.PlayOneShot(shot);
+          ammoInMagNow--;
+          gameObject.GetComponent<AmmoEnumerator>().ammo --;
+        }
+        //блок управления стрельбой пистолета-пулемёта
+        if(Input.GetButton("Fire1") && fireMode == fireModeList.Auto)
+        {
+          if(!IsInvoking("Shot")) 
+          {
             Invoke("Shot", fireRate); //Вызываем функцию Shot со скорость FireRate, в секундах
             audioSrs.PlayOneShot(shot);
             ammoInMagNow--;
             gameObject.GetComponent<AmmoEnumerator>().ammo --;
+          }
         }
-      }
       //блок управления дробовиком
-      if (Input.GetButtonDown("Fire1") && fireMode == fireModeList.Shootgun)
-      {
-        while(shootgunFraction > 0)
+        if (Input.GetButtonDown("Fire1") && fireMode == fireModeList.Shootgun)
         {
-        Shot();
-        shootgunFraction --;
-        }
+          while(shootgunFraction > 0)
+          {
+          Shot();
+          shootgunFraction --;
+          }
         audioSrs.PlayOneShot(shot);
-      }
+        }
       }
       //блок управления перезарядкой
       if (ammoInMagNow != ammoInMag && Input.GetKeyDown(KeyCode.R) && isReloading != true)
@@ -96,7 +98,9 @@ public class GunController : MonoBehaviour
     }
     void Shot()
     {
+      //управление разбросом оружия
       firePoint.transform.localEulerAngles = new Vector3(0, 0 , Random.Range(nativeRotation.z - gunAccuracy/2+90, nativeRotation.z + gunAccuracy/2+90));
+
 
       GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
       Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
