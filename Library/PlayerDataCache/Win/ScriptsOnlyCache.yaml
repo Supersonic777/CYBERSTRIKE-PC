@@ -777,7 +777,7 @@ ScriptsOnlyBuild:
     className: TMP_Settings
   - hash:
       serializedVersion: 2
-      Hash: 49fff2d3c729627986f552fc4b9bae8e
+      Hash: 465426a0c99a1c0a0533cac78a95dd53
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GunController

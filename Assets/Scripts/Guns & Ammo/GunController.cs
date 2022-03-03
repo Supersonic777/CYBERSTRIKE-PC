@@ -100,11 +100,14 @@ public class GunController : MonoBehaviour
     {
       //управление разбросом оружия
       firePoint.transform.localEulerAngles = new Vector3(0, 0 , Random.Range(nativeRotation.z - gunAccuracy/2+90, nativeRotation.z + gunAccuracy/2+90));
-
+      
+      gunFlashbang.SetActive(true);
 
       GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
       Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
       rb.AddForce(firePoint.up * bulletSpeed, ForceMode2D.Impulse);
+
+      Invoke("GunFlashbang", 0.05f);
     }
     void Reload()
     {
@@ -113,5 +116,10 @@ public class GunController : MonoBehaviour
       gameObject.GetComponent<AmmoEnumerator>().ammo = ammoInMag;
       isReloading = false;
       allAmmo -= ammoInMag;
+    }
+
+    void GunFlashbang()
+    {
+      gunFlashbang.SetActive(false);
     }
 }
