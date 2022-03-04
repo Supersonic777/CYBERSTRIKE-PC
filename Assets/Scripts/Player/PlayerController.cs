@@ -42,7 +42,6 @@ public class PlayerController : MonoBehaviour
 		movement.x = Input.GetAxis("Horizontal");
 		movement.y = Input.GetAxis("Vertical");
 
-        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 		if(playerHealth<=0)
 		{
 			dieMessage.SetActive(true);
@@ -90,13 +89,15 @@ public class PlayerController : MonoBehaviour
 		   rb.MovePosition(rb.position +  movement * speed * Time.fixedDeltaTime);
 		   }
 		}
-		
 		else if(staminaFill < 1)
 		{
 		   staminaFill +=0.004f;
 		}
+
+		mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+		
 		Vector2 lookDir = mousePos - rb.position;
-		float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;  //+-90 градусов
+		float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg; 
 		rb.rotation = angle;
 	}
 }	
