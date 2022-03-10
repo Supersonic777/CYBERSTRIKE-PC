@@ -99,10 +99,15 @@ public class PlayerController : MonoBehaviour
 		   staminaFill +=0.004f;
 		}
 
-		mousePos = cam.ScreenToWorldPoint(Input.mousePosition) * 5;
+		mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 		
-		Vector2 lookDir = mousePos - rb.position;
-		float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg; 
-		rb.rotation = angle;
+
+		Vector3 diff = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        diff.Normalize();
+ 
+        float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0f, 0f, rot_z);
+
+		//gameObject.transform.LookAt(mousePos);
 	}
 }	
