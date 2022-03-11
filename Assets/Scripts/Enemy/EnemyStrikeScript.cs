@@ -16,6 +16,8 @@ public class EnemyStrikeScript : MonoBehaviour
     public GameObject bulletPrefab;
     public GameObject reloadNotification;
     public GameObject gunFlashbang;
+
+    public GameObject lightTrigger;
     //public bool isInRightHand;
     public float bulletSpeed;
     public float fireRate;
@@ -49,15 +51,15 @@ public class EnemyStrikeScript : MonoBehaviour
       if(ammoInMagNow > 0)
       {
         //блок управления стрельбой обыкновенного пистолета
-        if (Input.GetButtonDown("Fire1") && fireMode == fireModeList.Single)
-        {
-          Shot();
-          audioSrs.PlayOneShot(shot);
-          ammoInMagNow--;
-          gameObject.GetComponent<AmmoEnumerator>().ammo --;
-        }
+        //if (Input.GetButtonDown("Fire1") && fireMode == fireModeList.Single)
+        //{
+        // Shot();
+        //  audioSrs.PlayOneShot(shot);
+        //  ammoInMagNow--;
+        //  gameObject.GetComponent<AmmoEnumerator>().ammo --;
+        //}
         //блок управления стрельбой пистолета-пулемёта
-        if(Input.GetButton("Fire1") && fireMode == fireModeList.Auto)
+        if(lightTrigger.GetComponent<DetectionTrigger>().isTriggered && fireMode == fireModeList.Auto)
         {
           if(!IsInvoking("Shot")) 
           {
@@ -98,7 +100,7 @@ public class EnemyStrikeScript : MonoBehaviour
     void Shot()
     {
       //управление разбросом оружия
-      firePoint.transform.localEulerAngles = new Vector3(0, 0 , Random.Range(nativeRotation.z - gunAccuracy/2+90, nativeRotation.z + gunAccuracy/2+90));
+      firePoint.transform.localEulerAngles = new Vector3(0, 0 , Random.Range(nativeRotation.z - gunAccuracy/2+90, nativeRotation.z + gunAccuracy/2+90) - 90 );
       
       gunFlashbang.SetActive(true);
 

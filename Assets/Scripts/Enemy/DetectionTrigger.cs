@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class DetectionTrigger : MonoBehaviour
 {
-    public GameObject korpus;
-    public GameObject bashnya;
+    //public GameObject firePoint;
+    public bool isTriggered;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,13 +21,11 @@ public class DetectionTrigger : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            korpus.GetComponent<Rotator>().enabled = true;
-            bashnya.GetComponent<Rotator>().enabled = true;
+            isTriggered = true;
         }
         else
         {
-            korpus.GetComponent<Rotator>().enabled = false;
-            bashnya.GetComponent<Rotator>().enabled = false;
+            isTriggered = false;
         }
     }
 }
