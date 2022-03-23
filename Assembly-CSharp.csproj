@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\Camera\Zoom.cs" />
      <Compile Include="Assets\Scripts\HightScore.cs" />
      <Compile Include="Assets\Scripts\Enemy\DamageArea.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyBulletScript.cs" />
      <Compile Include="Assets\Scripts\SelfDestroy.cs" />
      <Compile Include="Assets\Scripts\Guns &amp; Ammo\AmmoEnumerator.cs" />
      <Compile Include="Assets\Scripts\Enemy\Striker.cs" />
@@ -63,7 +64,7 @@
      <Compile Include="Assets\Scripts\Enemy\EnemyStrikeScript.cs" />
      <Compile Include="Assets\Scripts\UI\GameMenu.cs" />
      <Compile Include="Assets\Scripts\Archive\ShotSound.cs" />
-     <Compile Include="Assets\Scripts\Enemy\EnemyBulletScript.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Kamikaze.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.26f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
