@@ -22,8 +22,8 @@ public class Enemy : MonoBehaviour
   public float timeToSelfDestroy;
   public GameObject blood;
 
-  private GameObject player;
-  private Transform target;
+  public GameObject player;
+  public Transform target;
     //private PlayerController giveDamage = new PlayerController();
   void Start()
   {
