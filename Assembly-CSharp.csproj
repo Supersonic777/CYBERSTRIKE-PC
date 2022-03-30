@@ -43,8 +43,9 @@
      <Compile Include="Assets\Scripts\UI\MainMenu.cs" />
      <Compile Include="Assets\Scripts\EnergyDrink.cs" />
      <Compile Include="Assets\Scripts\Enemy\DetectionTrigger.cs" />
+     <Compile Include="Assets\Scripts\RadiationZone.cs" />
      <Compile Include="Assets\Scripts\Guns &amp; Ammo\GunController.cs" />
-     <Compile Include="Assets\Scripts\Enemy\Rotator.cs" />
+     <Compile Include="Assets\Scripts\Rotator.cs" />
      <Compile Include="Assets\Scripts\UI\ButtonFx.cs" />
      <Compile Include="Assets\Scripts\Enemy\Bots\Kamikaze.cs" />
      <Compile Include="Assets\Scripts\Archive\EnemyPatrol.cs" />
@@ -66,7 +67,7 @@
      <Compile Include="Assets\Scripts\Enemy\Bots\EnemyStrikeScript.cs" />
      <Compile Include="Assets\Scripts\UI\GameMenu.cs" />
      <Compile Include="Assets\Scripts\Archive\ShotSound.cs" />
-     <Compile Include="Assets\Scripts\RadiationZone.cs" />
+     <Compile Include="Assets\Scripts\Enemy\RotateToPlayer.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.26f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
