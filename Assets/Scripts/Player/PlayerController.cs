@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -36,16 +35,9 @@ public class PlayerController : MonoBehaviour
 
 	void Update () 
 	{
-		//Vector3 diference = cam.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-		//float rotateZ = Mathf.Atan2(diference.y, diference.x) * Mathf.Rad2Deg;
-		//transform.rotation = Quaternion.Euler(0f,0f,rotateZ + rotationOffset);
-		
 		healthFill = playerHealth/100f;
         bar.fillAmount = healthFill;
 		stamina.fillAmount = staminaFill;
-
-		movement.x = Input.GetAxis("Horizontal");
-		movement.y = Input.GetAxis("Vertical");
 
 		if(playerHealth<=0)
 		{
@@ -70,44 +62,17 @@ public class PlayerController : MonoBehaviour
 	}
 	void FixedUpdate ()
 	{
-		if(Input.GetKey(KeyCode.W)||Input.GetKey(KeyCode.D)||Input.GetKey(KeyCode.S)||Input.GetKey(KeyCode.A))
-		{
-		   if(Input.GetKey(KeyCode.LeftShift))
-		   {
-			   if(staminaFill >0)
-			   {
-			    	rb.MovePosition(rb.position +  movement * acceleration * Time.fixedDeltaTime);
-			        staminaFill -= 0.002f;
-			   }
-			   else
-			   {
-			    	rb.MovePosition(rb.position +  movement * speed * Time.fixedDeltaTime);
-			   }
-		   }
-	
-		   else
-		   {
-			   if(staminaFill<1)
-			   {
-		         staminaFill +=0.001f;
-		       }
-		   rb.MovePosition(rb.position +  movement * speed * Time.fixedDeltaTime);
-		   }
-		}
-		else if(staminaFill < 1)
-		{
-		   staminaFill +=0.004f;
-		}
+		movement.x = Input.GetAxis("Horizontal");
+		movement.y = Input.GetAxis("Vertical");
+
+		rb.MovePosition(rb.position +  movement * speed * Time.fixedDeltaTime);
 
 		mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 		
-
 		Vector3 diff = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         diff.Normalize();
  
         float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f, 0f, rot_z);
-
-		//gameObject.transform.LookAt(mousePos);
 	}
 }	
